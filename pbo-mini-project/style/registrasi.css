@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,700;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,700;1,500;1,600&family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap');
+
+:root {
+  --Josefin: 'Josefin Sans', sans-serif;
+  --Noto: 'Noto Sans JP', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #cfdbdd65;
+  overflow: hidden;
+}
+.lingkaran {
+  width: 60em;
+  height: 60em;
+  position: absolute;
+  left: -10em;
+  top: 5em;
+  background: linear-gradient(90deg, #dce1e16d, #76888d);
+  border-radius: 50%;
+  z-index: -1;
+}
+.container {
+  width: 50em;
+  height: 32em;
+  background: transparent;
+  border: 5px solid white;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  display: flex;
+}
+.left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.right {
+  height: 100%;
+  width: 70%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 20em;
+  height: 20em;
+}
+.left svg {
+  margin:1em 0 0 -14em;
+  color: white;
+}
+.left h1 {
+  font: 700 30px var(--Josefin);
+  margin: 0 0 1em 0;
+  color: white;
+}
+.left label {
+  font: 14px var(--Noto);
+  color: white;
+}
+.left input {
+  width: 20em;
+  height: 2em;
+  border: 2px solid white;
+  border-radius: 50px;
+  background: transparent;
+  outline: none;
+  text-indent: 12px;
+  color: white;
+}
+.left button {
+  width: 20em;
+  height: 2.2em;
+  border-radius: 50px;
+  border: none;
+  background: white;
+  margin-top: 3em;
+  cursor: pointer;
+  color: #76888d;
+}
+.left button:hover {
+  background: #8d9da1;
+  color: white;
+  box-shadow: 0 0 30px white;
+  transition: 0.4s ease;
+}
+.left p a {
+  color: white;
+  text-decoration: none;
+  font: 14px var(--Noto);
+}
+.left p {
+  text-align: center;
+}
+.left p a:hover {
+  color: #ffffff9b;
+  transition: 0.3s;
+}

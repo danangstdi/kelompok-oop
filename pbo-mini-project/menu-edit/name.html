@@ -1,0 +1,67 @@
+<!--<?php
+
+require_once '/xampp/htdocs/pbo-mini-project/script/db.php';
+
+$db = new Database();
+if (isset($_GET["id"])) {
+    $id = $_GET["id"];
+    $row = $db->query("SELECT * FROM user_tb WHERE id = $id")[0];
+} else {
+    echo "Data tidak ditemukan";
+    exit();
+}
+
+if (isset($_POST["selesai"])) {
+    if (isset($_POST["user_name"])) {
+        $name = $_POST["user_name"];
+        if (mysqli_query($db->con, "UPDATE user_tb SET user_name = '$name' WHERE id = $id") > 0 ) {
+            echo "<script>
+                      alert('Nama anda berhasil diubah!');
+                      document.location.href = '/pbo-mini-project/account.php?id=$id';
+                  </script>";
+        } else {
+            echo "<script>
+                      alert('Nama anda gagal diubah!');
+                      document.location.href = '/pbo-mini-project/account.php?id=$id';
+                  </script>";
+        }
+    }
+}
+
+?>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: #a2b2b548;
+            border: 2px solid black;
+            height: 30em;
+            width: 50em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <div class="container">
+            <label for="user_name">Nama</label>
+            <input type="text" name="user_name" value="<?= $row['user_name'] ?>" required autocomplete="off">
+            <p></p>
+            <button type="submit" name="selesai">Selesai</button>
+        </div>
+        </form>
+</body>
+</html>
